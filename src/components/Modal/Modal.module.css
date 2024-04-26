@@ -1,0 +1,91 @@
+.overlay {
+  z-index: 100;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-overlay);
+  animation: var(--animation-fade-in);
+}
+
+.overlay.closing {
+  animation: var(--animation-fade-out);
+}
+
+.modal {
+  display: flex;
+  position: relative;
+  z-index: 101;
+  position: fixed;
+  width: calc(100vw - 2 * 16px);
+  max-height: calc(100% - 2 * 16px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px 4px 16px 16px;
+  border-radius: 20px;
+  background-color: var(--color-white);
+  animation: var(--animation-modal-in);
+}
+
+.modal.closing {
+  animation: var(--animation-modal-out);
+}
+
+.modal div::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.modal div::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 7px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .modal {
+    width: 448px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .modal {
+    width: 704px;
+    max-height: calc(100% - 2 * 32px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal {
+    width: 982px;
+    max-height: calc(100% - 2 * 40px);
+    padding: 40px 16px 40px 40px;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 16px;
+  color: var(--color-main);
+}
+
+.close svg {
+  transition: transform var(--transition);
+}
+
+.close:hover svg {
+  transform: scale(1.2);
+}
+
+.close:active svg {
+  transform: scale(1);
+}
+
+@media screen and (min-width: 1440px) {
+  .close {
+    padding: 40px;
+  }
+}

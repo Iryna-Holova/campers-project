@@ -1,0 +1,79 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 258px;
+  }
+
+  .wrapper > img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: 38%;
+    min-width: 290px;
+  }
+}
+
+.chevron {
+  position: absolute;
+  height: 100%;
+  padding-right: 8px;
+  padding-left: 8px;
+  color: var(--color-white);
+  opacity: 0.3;
+  transition: opacity var(--transition);
+}
+.chevron svg {
+  overflow: visible;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+}
+.chevron.right {
+  right: 0;
+}
+
+.chevron:hover {
+  opacity: 0.5;
+}
+
+.dot_buttons {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot_button {
+  padding: 12px;
+}
+
+.dot_button:disabled {
+  pointer-events: none;
+}
+
+.dot_button > span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-white-50);
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.dot_button:disabled > span {
+  transform: scale(2);
+}
+
+.dot_button:hover > span {
+  background-color: var(--color-white);
+}

@@ -1,0 +1,8 @@
+@import-normalize; /* bring in normalize.css styles */
+@import '../src/css/reset.css';
+@import '../src/fonts/Inter.css';
+@import '../src/css/container.css';
+@import '../src/css/animation.css';
+@import '../src/css/variables.css';
+@import '../src/css/visually-hidden.css';
+@import '../src/css/page.css';

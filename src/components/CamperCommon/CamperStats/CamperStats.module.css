@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.item {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: var(--color-main);
+}
+
+.reviews {
+  text-decoration: underline;
+  transition: text-decoration-color var(--transition);
+}
+
+.reviews:hover {
+  text-decoration-color: var(--color-rating);
+}
+
+.reviews svg {
+  fill: var(--color-rating);
+  transition: transform var(--transition);
+}
+
+.reviews:hover svg {
+  transform: scale(1.2);
+}

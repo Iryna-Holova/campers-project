@@ -1,0 +1,41 @@
+.wrapper {
+  overflow-x: auto;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    margin-bottom: 24px;
+  }
+}
+
+.images {
+  display: flex;
+  column-gap: 16px;
+  padding-bottom: 4px;
+}
+
+@media screen and (min-width: 1440px) {
+  .images {
+    padding-bottom: 0;
+  }
+}
+
+.image {
+  flex-shrink: 0;
+  height: 234px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1440px) {
+  .image {
+    width: 290px;
+    height: 310px;
+  }
+}
+
+.image img {
+  height: 100%;
+  object-fit: cover;
+}

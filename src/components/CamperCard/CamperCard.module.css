@@ -1,0 +1,119 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid var(--color-main-20);
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    column-gap: 24px;
+    padding: 24px;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .details {
+    width: 394px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .details {
+    row-gap: 24px;
+    width: 58%;
+    min-width: 526px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.title {
+  position: relative;
+  padding-right: 38px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    flex-direction: column;
+  }
+}
+
+.heart {
+  position: absolute;
+  right: -8px;
+  top: -7px;
+  width: 44px;
+  height: 44px;
+  color: var(--color-main);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.heart:hover {
+  transform: scale(1.1);
+}
+
+.heart:hover,
+.heart.checked {
+  color: var(--color-accent);
+}
+
+.heart:active {
+  transform: scale(1);
+}
+
+.heart svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filled {
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.heart.checked > .filled {
+  opacity: 1;
+}
+
+.description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .details > button {
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .details > button {
+    align-self: flex-start;
+  }
+}

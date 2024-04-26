@@ -1,0 +1,120 @@
+.wrapper {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--color-main-20);
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    padding: 24px;
+  }
+}
+
+.title {
+  margin-bottom: 4px;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--color-main);
+}
+
+@media screen and (min-width: 1440px) {
+  .title {
+    margin-bottom: 8px;
+  }
+}
+
+.text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .text {
+    margin-bottom: 24px;
+  }
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1440px) {
+  .fields {
+    row-gap: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+.field {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: var(--color-inputs);
+  color: var(--color-main);
+  font-size: 16px;
+  line-height: 1.25;
+  transition: border var(--transition);
+}
+
+@media screen and (min-width: 1440px) {
+  .input {
+    padding: 18px;
+  }
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid var(--color-text);
+}
+
+.error {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  transform: translateY(50%);
+  padding-inline: 4px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  background-color: var(--color-white);
+  color: var(--color-accent);
+  animation: var(--animation-fade);
+}
+
+@media screen and (min-width: 1440px) {
+  .error {
+    right: 18px;
+  }
+}
+
+.error ~ .input:not(:hover),
+.error ~ div > div > input {
+  border-color: var(--color-accent);
+}
+
+.icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-main);
+  pointer-events: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .icon {
+    right: 18px;
+  }
+}

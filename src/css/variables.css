@@ -1,0 +1,25 @@
+:root {
+  --color-white: #ffffff;
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-white-transparent: rgba(255, 255, 255, 0.3);
+  --color-light: #f2f4f7;
+  --color-inputs: #f7f7f7;
+  --color-main: #101828;
+  --color-main-60: rgba(16, 24, 40, 0.6);
+  --color-main-40: rgba(16, 24, 40, 0.4);
+  --color-main-20: rgba(16, 24, 40, 0.2);
+  --color-main-10: rgba(16, 24, 40, 0.1);
+  --color-text: #475467;
+  --color-text-20: rgba(71, 84, 103, 0.2);
+  --color-accent: #e44848;
+  --color-accent-active: #d84343;
+  --color-accent-light: #fceded;
+  --color-rating: #ffc531;
+  --color-overlay: rgba(17, 18, 19, 0.4);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-fade-in: fade 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-fade-out: fade 210ms reverse linear;
+  --animation-modal-in: modal-in 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-modal-out: modal-out 250ms linear;
+  --animation-pulse: pulse 2s infinite;
+}

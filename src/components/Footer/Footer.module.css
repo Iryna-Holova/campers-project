@@ -1,0 +1,178 @@
+.footer {
+  margin-top: 72px;
+  background-color: var(--color-main);
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    margin-top: 128px;
+  }
+}
+
+.container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+.logo {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1440px) {
+  .logo {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+}
+
+.logo span {
+  color: var(--color-accent);
+}
+
+.contacts {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.contact_label {
+  color: var(--color-white-transparent);
+}
+
+.link {
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+.link_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+@media screen and (min-width: 1440px) {
+  .link_list {
+    row-gap: 24px;
+  }
+}
+
+.social_list {
+  display: flex;
+  column-gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .social_list {
+    flex-basis: 258px;
+    column-gap: 24px;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .social_list {
+    flex-basis: 343px;
+  }
+}
+
+.social_link {
+  line-height: 0;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--color-white-transparent);
+  transition: color var(--transition);
+}
+
+.social_link:hover {
+  color: var(--color-accent);
+}
+
+@media screen and (min-width: 1440px) {
+  .social_link {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .social_link svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.bottom {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .bottom {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .bottom {
+    column-gap: 12px;
+  }
+
+  .bottom svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.bottom > svg {
+  fill: var(--color-accent);
+}
+
+.github_link {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  transition: color var(--transition);
+}
+
+@media screen and (min-width: 1440px) {
+  .github_link {
+    column-gap: 16px;
+  }
+}
+
+.github_link:hover {
+  color: var(--color-main);
+}

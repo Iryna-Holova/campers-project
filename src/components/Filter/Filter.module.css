@@ -1,0 +1,233 @@
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    flex-shrink: 0;
+    width: 360px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-main-60);
+}
+
+.location {
+  margin-bottom: 32px;
+}
+
+.location h3 {
+  margin-bottom: 8px;
+}
+
+.field {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  padding: 12px 12px 12px 38px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: var(--color-inputs);
+  color: var(--color-main-60);
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.select.selected {
+  color: var(--color-main);
+}
+
+.select:hover,
+.select:focus {
+  color: var(--color-main);
+  border-color: var(--color-main-60);
+}
+
+.field:hover > .select:not(.unapplied) {
+  border-color: var(--color-main-60);
+}
+
+.select.unapplied {
+  border-color: var(--color-accent);
+}
+
+@media screen and (min-width: 1440px) {
+  .select {
+    padding: 18px 18px 18px 44px;
+  }
+}
+
+.select option[value=''] {
+  display: none;
+}
+
+.location_icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-main-60);
+  transition: color var(--transition);
+}
+
+@media screen and (min-width: 1440px) {
+  .location_icon {
+    left: 17px;
+  }
+}
+
+.select.selected ~ .location_icon,
+.select:hover ~ .location_icon,
+.select:focus ~ .location_icon {
+  color: var(--color-main);
+}
+
+.location_clear {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  color: var(--color-main);
+  transition: opacity var(--transition);
+}
+
+.location_clear > svg {
+  transition: transform var(--transition);
+}
+
+.location_clear:hover > svg {
+  transform: scale(1.2);
+}
+
+.location_clear:active > svg {
+  transform: scale(1);
+}
+
+@media screen and (min-width: 1440px) {
+  .location_clear {
+    padding: 18px;
+  }
+}
+
+.select.selected ~ .location_clear {
+  display: block;
+  opacity: 1;
+}
+
+.filters_wrapper {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1440px) {
+  .filters_wrapper {
+    margin-bottom: 64px;
+  }
+}
+
+.filters_wrapper h3 {
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-main);
+  border-bottom: 1px solid var(--color-main-10);
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters {
+    flex-direction: row;
+    column-gap: 24px;
+  }
+
+  .filter {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter {
+    width: 100%;
+  }
+}
+
+.checkbox_group {
+  display: flex;
+  column-gap: 10px;
+  row-gap: 8px;
+  flex-wrap: wrap;
+}
+
+.checkbox_hidden {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  height: 95px;
+  width: calc((100% - 2 * 10px) / 3);
+  min-width: 95px;
+  border-radius: 10px;
+  border: 1px solid var(--color-main-20);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-main-40);
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.label:hover,
+.label:has(input:focus) {
+  border-color: var(--color-main-60);
+}
+
+.label:hover,
+.label.unapplied,
+.label:has(input:checked) {
+  color: var(--color-main);
+}
+
+.label:has(input:checked).unapplied,
+.label:has(input:checked).inactive,
+.label:not(:has(input:checked)).active {
+  border-color: var(--color-accent);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
